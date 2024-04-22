@@ -44,4 +44,5 @@ pub trait Mapper: Send {
     fn needs_bios(&self) -> bool {return false;}
     fn load_bios(&mut self, _: Vec<u8>) {}
     fn switch_disk(&mut self, _: usize) {}
+    fn vrc7_set_patches(&mut self, _patches: &[u8]) {}
 }

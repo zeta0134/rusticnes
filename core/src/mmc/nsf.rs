@@ -1402,4 +1402,8 @@ impl Mapper for NsfMapper {
     fn audio_multiplexing(&mut self, emulate: bool) {
         self.n163_expansion_audio_chip.emulate_multiplexing = emulate;
     }
+
+    fn vrc7_set_patches(&mut self, patches: &[u8]) {
+        self.vrc7_audio.set_patches(patches);
+    }
 }
